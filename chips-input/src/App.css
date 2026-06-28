@@ -1,0 +1,35 @@
+input {
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: large;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.resInput {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.textSpan {
+  margin: 5px;
+  padding: 10px;
+  background-color: rgb(212, 210, 210);
+  width: 90px;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+.cross {
+  margin-left: 7px;
+  cursor: pointer;
+}
