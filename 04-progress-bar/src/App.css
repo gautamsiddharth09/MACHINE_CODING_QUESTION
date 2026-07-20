@@ -1,0 +1,41 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+  text-align: center;
+  padding: 10px;
+}
+
+.progress-container {
+ text-align: center;
+ background-color: lightgrey;
+ width: 500px;
+ margin: 20px;
+ border-radius: 20px;
+ height: 50px;
+ overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   /* transition: width 0.5s ease; */
+}
+.progress-fill span{
+  margin-left: 50px;
+}
+
+ul{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+}
