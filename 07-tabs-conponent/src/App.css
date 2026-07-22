@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav{
+  background-color: lightgrey;
+  padding: 20px;
+  font-size: larger;
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+button{
+  background: none;
+  border: none;
+  font-size: large;
+  cursor: pointer;
+}
+
+.content{
+  text-align: center;
+  margin: 20px;
+}
+
+.active{
+  color: red;
+}
