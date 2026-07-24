@@ -1,0 +1,39 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+}
+
+.star{
+  width: 400px;
+  height: 350px;
+  background-color: lightgrey;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filledStar{
+  color: rgb(248, 171, 5);
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.empty{
+   cursor: pointer;
+  font-size: 30px;
+}
+
+p{
+  font-size: larger;
+}
+
+/* .inner-container{
+  width: 350px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50px;
+} */
