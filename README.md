@@ -2,19 +2,16 @@
 
 A collection of **16 React machine coding interview problems** to practice React fundamentals, state management, API integration, forms, animations, and UI development.
 
-# React Machine Coding Challenges
-
-
 <p align="center">
-  <img src="./assets/images/preview.png" alt="Project Preview" width="400" />
+  <img src="./assets/images/preview.png" alt="Project Preview" width="600" height="250" style="object-fit: cover;" />
 </p>
 
 ## Tech Stack
 
-- React
-- JavaScript (ES6+)
-- CSS3
-- Fetch API
+- **Framework:** React
+- **Language:** JavaScript (ES6+)
+- **Styling:** CSS3
+- **Data Fetching:** Fetch API
 
 ## Projects
 
