@@ -4,7 +4,10 @@ A collection of **16 React machine coding interview problems** to practice React
 
 # React Machine Coding Challenges
 
-![Project Preview](./assets/images/preview.png)
+
+<p align="center">
+  <img src="./assets/images/preview.png" alt="Project Preview" width="400" />
+</p>
 
 ## Tech Stack
 
