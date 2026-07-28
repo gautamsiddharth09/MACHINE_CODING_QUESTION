@@ -2,6 +2,10 @@
 
 A collection of **16 React machine coding interview problems** to practice React fundamentals, state management, API integration, forms, animations, and UI development.
 
+# React Machine Coding Challenges
+
+![Project Preview](./assets/images/preview.png)
+
 ## Tech Stack
 
 - React
