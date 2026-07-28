@@ -3,7 +3,7 @@
 A collection of **16 React machine coding interview problems** to practice React fundamentals, state management, API integration, forms, animations, and UI development.
 
 <p align="center">
-  <img src="./assets/images/img.png" alt="Project Preview" width="400" />
+  <img src="./assets/images/preview.png" alt="Project Preview" width="400" />
 </p>
 ## Tech Stack
 
