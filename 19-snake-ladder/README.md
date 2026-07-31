@@ -10,7 +10,7 @@ A complete Snake and Ladder game built with **React.js**. The project demonstrat
 
 ## 📸 Screenshot
 
-![Game Screenshot](assets/game.png)
+![Game Screenshot](src/assets/game.png)
 
 
 ## 🚀 Features
