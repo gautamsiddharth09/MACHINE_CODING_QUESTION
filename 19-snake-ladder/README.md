@@ -2,7 +2,16 @@
 
 A complete Snake and Ladder game built with **React.js**. The project demonstrates state management, grid rendering, game logic, dice rolling, snakes, ladders, and winner detection.
 
+
 ---
+
+
+# Snake & Ladder Game
+
+## 📸 Screenshot
+
+![Game Screenshot](assets/game.png)
+
 
 ## 🚀 Features
 
@@ -74,16 +83,7 @@ A complete Snake and Ladder game built with **React.js**. The project demonstrat
 ---
 
 
-## 📸 Screenshots
 
-Add screenshots here.
-
-```
-assets/
-    game.png
-```
-
----
 
 ## 📚 Learning Outcomes
 
