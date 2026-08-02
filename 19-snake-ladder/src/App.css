@@ -2,214 +2,84 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
 
 body {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #0f172a, #1e293b, #312e81);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+  background: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
 }
 
 .container {
-  width: 100%;
-  max-width: 950px;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
-  padding: 25px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
 }
-
-.container h1 {
-  text-align: center;
-  color: #fff;
-  margin-bottom: 10px;
-  font-size: 2rem;
-}
-
-.container > h2 {
-  text-align: center;
-  color: #38bdf8;
-  margin-bottom: 20px;
-}
-
-/* ===========================
-         BOARD
-=========================== */
 
 .board {
-  width: min(90vw, 550px);
-  margin: 20px auto;
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  gap: 4px;
+  grid-template-columns: repeat(10, 50px);
+  gap: 2px;
+  background: #333;
+  padding: 5px;
+  
 }
 
-.cell {
-  aspect-ratio: 1;
-  background: #fff;
-  border-radius: 8px;
-  border: 1px solid #d1d5db;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.cell:hover {
-  transform: scale(1.05);
-  background: #eff6ff;
-  box-shadow: 0 5px 12px rgba(59, 130, 246, 0.25);
-}
-
-.cell span {
-  position: absolute;
-  top: 4px;
-  left: 6px;
-  font-size: 10px;
-  color: #666;
-}
-
-/* ===========================
-      PLAYER TOKENS
-=========================== */
-
-.p1,
-.p2 {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  color: white;
-  font-size: 10px;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-}
-
-.p1 {
-  background: #ef4444;
-  bottom: 3px;
-  left: 3px;
-}
-
-.p2 {
-  background: #2563eb;
-  top: 3px;
-  right: 3px;
-}
-
-/* ===========================
-       GAME INFO
-=========================== */
-
-.game-info {
-  text-align: center;
-  margin-top: 25px;
-}
-
-.game-info h2 {
-  color: white;
-  margin-bottom: 15px;
-}
-
-button {
+.ceil {
+  width: 50px;
+  height: 50px;
+  background: white;
   border: none;
-  padding: 12px 35px;
-  border-radius: 30px;
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-  color: white;
+  cursor: pointer;
+  position: relative;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: bold;
+}
+
+.red {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  background: red;
+  color: white;
+  font-size: 10px;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.yellow {
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  background: gold;
+  color: black;
+  font-size: 10px;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.roll {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background: #28a745;
+  color: white;
   cursor: pointer;
   transition: 0.3s;
 }
 
-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.35);
+.roll:hover {
+  background: #1f8a37;
+  transform: scale(1.05);
 }
 
-/* ===========================
-      PLAYER CARDS
-=========================== */
-
-.players {
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.player-card {
-  width: 180px;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 15px;
-  padding: 15px;
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  transition: 0.3s;
-}
-
-.player-card:hover {
-  transform: translateY(-5px);
-}
-
-.player-card:first-child {
-  border-top: 5px solid #ef4444;
-}
-
-.player-card:last-child {
-  border-top: 5px solid #2563eb;
-}
-
-.player-card h3 {
-  margin-bottom: 10px;
-}
-
-.player-card p {
-  color: #e2e8f0;
-}
-
-/* ===========================
-      MOBILE
-=========================== */
-
-@media (max-width: 600px) {
-  .container {
-    padding: 15px;
-  }
-
-  .container h1 {
-    font-size: 1.6rem;
-  }
-
-  .board {
-    width: 95vw;
-    gap: 2px;
-  }
-
-  .cell span {
-    font-size: 8px;
-  }
-
-  .p1,
-  .p2 {
-    width: 18px;
-    height: 18px;
-    font-size: 8px;
-  }
-
-  .player-card {
-    width: 100%;
-  }
+.roll:active {
+  transform: scale(0.95);
 }

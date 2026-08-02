@@ -3,118 +3,101 @@ import "./App.css";
 import React, { useState } from "react";
 
 function App() {
-  // players
+  let box = [];
+
+  for (let i = 100; i > 0; i--) {
+    box.push(i);
+  }
+
   const [players, setPlayers] = useState({
     player1: 1,
     player2: 1,
   });
 
-  // dice
-  const [dice, setDice] = useState(0);
-
-  const [position, setPosition] = useState(1);
-
   const [currentPlayer, setCurrentPayer] = useState("player1");
 
-  // board
-  let board = [];
-  for (let i = 0; i < 100; i++) {
-    board.push(i + 1);
-  }
-  console.log("board", board);
+  const [dice, setDice] = useState(0);
 
-  // ladders
-  const ladders = {
-    6: 25,
-    11: 40,
-    17: 69,
-    46: 90,
-    60: 85,
+ 
+
+  const snake = {
+    99: 13,
+    90: 73,
+    80: 55,
+    60: 50,
+    43: 35,
+    30: 10,
   };
 
-  // snakes
-  const snakes = {
-    99: 54,
-    70: 55,
-    52: 42,
-    25: 2,
-    95: 72,
+  const ladder = {
+    15: 75,
+    30: 50,
+    20: 45,
+    40: 95,
+    55: 65,
+    63: 80,
   };
 
-  const rollDice = () => {
-    let random = Math.floor(Math.random() * 6) + 1;
+  const roll = () => {
+    const random = Math.floor(Math.random() * 6) + 1;
+
+    // dice will not update immediate
     setDice(random);
 
-    let newPosition = position + dice;
+    let nePosition = players[currentPlayer] + random;
 
-    if (newPosition <= 100) {
-      if (ladders[newPosition]) {
-        alert("Ladder");
-        newPosition = ladders[newPosition];
-      } else if (snakes[newPosition]) {
-        alert("Snakes");
-        newPosition = snakes[newPosition];
-      }
+    if (nePosition > 100) {
+      setCurrentPayer(currentPlayer === "player1" ? "player2" : "player1");
+      return;
+    }
 
-      const updatePlayers = {
-        ...players,
-        [currentPlayer]: newPosition,
-      };
+    if (snake[nePosition]) {
+      alert("snak huuuuuuu");
+      nePosition = snake[nePosition];
+    } else if (ladder[nePosition]) {
+      alert("laderrrrrrrrrr");
+      nePosition = ladder[nePosition];
+    }
 
-      setPlayers(updatePlayers);
+    const updatePlayer = {
+      ...players,
+      [currentPlayer]: nePosition,
+    };
 
-      if (position === 100) {
-        alert("wooooooooon");
-        return;
-      }
+    setPlayers(updatePlayer);
+
+    if (nePosition === 100) {
+      alert("wooooooooon");
+      return;
     }
 
     setCurrentPayer(currentPlayer === "player1" ? "player2" : "player1");
+
+    console.log("players.player1", players);
   };
 
   return (
-   <>
-  <div className="container">
-    <h1>Snake & Ladder (2 Players)</h1>
-
-    <h2>Current Turn: {currentPlayer}</h2>
-
-    <div className="board">
-      {board.map((cell) => (
-        <div key={cell} className="cell">
-          <span>{cell}</span>
-
-          {players.player1 === cell && (
-            <div className="p1">P1</div>
-          )}
-
-          {players.player2 === cell && (
-            <div className="p2">P2</div>
-          )}
-        </div>
-      ))}
-    </div>
-
-    <div className="game-info">
-      <h2>🎲 Dice: {dice}</h2>
-
-      <button onClick={rollDice}>Roll Dice</button>
-
-      <div className="players">
-        <div className="player-card">
-          <h3>🔴 Player 1</h3>
-          <p>Position: {players.player1}</p>
-        </div>
-
-        <div className="player-card">
-          <h3>🔵 Player 2</h3>
-          <p>Position: {players.player2}</p>
+    <>
+      <h1>Snake and Ladder</h1>
+      <div className="container">
+        <div className="board">
+          {box.map((i) => (
+            <button key={i} className="ceil">
+              {players.player1 === i && (<span className="red">P1</span>)}
+              {i}
+              {players.player2 === i && ( <span className="yellow"> P2 </span>)}
+            </button>
+          ))}
         </div>
       </div>
-      
-    </div>
-  </div>
-</>
+
+      <button onClick={roll} className="roll">
+        {" "}
+        Roll{" "}
+      </button>
+
+      <h1> Dice : {dice} </h1>
+    </>
   );
 }
 
