@@ -1,59 +1,41 @@
+import { useEffect, useState } from "react";
 import "./App.css";
-import React, { useEffect, useState } from "react";
 
 function App() {
-  let bar = [
-    { id: 1, progress: 70 },
-    { id: 2, progress: 20 },
-    { id: 3, progress: 40 },
-    { id: 4, progress: 90 },
-    { id: 5, progress: 50 },
-  ];
+  const [progress, setProgress] = useState(0);
 
-  const [pBar, setPbar] = useState(0);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) {
+          clearInterval(timer);
+          return 100;
+        }
 
-useEffect(()=>{
+        return prev + 10;
+      });
+    }, 1000);
 
-  const interval = setInterval(()=>{
-    setPbar((prev)=> {
-
-       if(prev >= 90){
-        clearInterval(interval)
-        return prev
-      }
-     
-
-      return prev +1
-    })
-  },20)
-
-  return ()=>{
-    clearInterval(interval)
-  }
-
-},[pBar])
-
+    return () => clearInterval(timer);
+  }, []);
 
   return (
-    <>
+    <div className="container">
       <h1>Progress Bar</h1>
 
-      <ul>
-        {bar.map((e) => (
-          <li key={e.id}>
-            <div className="progress-container">
-              <div
-                className="progress-fill"
-               
-                style={{ width: `${Math.min(pBar, e.progress)}%` }}
-              >
-                <span>{e.progress}%</span>
-              </div>
-            </div>
-          </li>
-        ))}
-      </ul>
-    </>
+      <div className="progress-container">
+        <div
+          className="progress-fill"
+          style={{ width: `${progress}%` }}
+        ></div>
+      </div>
+
+      <h2>{progress}%</h2>
+
+      {progress === 100 && (
+        <h3 className="complete">Task Completed 🎉</h3>
+      )}
+    </div>
   );
 }
 
