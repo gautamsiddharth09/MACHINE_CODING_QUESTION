@@ -1,0 +1,17 @@
+.checkbox{
+  display: flex;
+  margin: 10px;
+  gap: 10px;
+}
+
+input{
+  padding: 10px;
+  font-size: larger;
+}
+
+button{
+   padding: 10px;
+  font-size: larger;
+  cursor: pointer;
+}
+
