@@ -1,0 +1,37 @@
+/* 
+body{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+
+form {
+  display: flex;
+  width: 300px;
+  height: 400px;
+  background-color: lightgray;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  
+}
+
+
+.email{
+padding: 15px;
+border-radius: 15px;
+border: none;
+width: 80%;
+}
+
+button{
+  width: 150px;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  background-color: aquamarine;
+  cursor: pointer;
+} */
