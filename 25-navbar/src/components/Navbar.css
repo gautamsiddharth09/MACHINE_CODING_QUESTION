@@ -1,0 +1,25 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+  background-color: aqua;
+  padding: 15px;
+}
+
+/* .container{
+
+} */
+
+ul{
+  
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  cursor: pointer;
+  list-style: none;
+}
+
