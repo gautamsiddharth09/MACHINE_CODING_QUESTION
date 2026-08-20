@@ -1,0 +1,20 @@
+.container{
+  width: 300px;
+  height: 200px;
+  background-color: lightgrey;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+}
+
+.cross{
+  background-color: transparent;
+  border: none;
+  margin-left: 260px;
+  cursor: pointer;
+}
+
+.cross:hover{
+   background-color: transparent;
+   color: red;
+}
