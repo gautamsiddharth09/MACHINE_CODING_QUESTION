@@ -1,34 +1,38 @@
-# React Machine Coding Challenges
+# Frontend Projects Collection
 
-A collection of **16 React machine coding interview problems** to practice React fundamentals, state management, API integration, forms, animations, and UI development.
+This repository contains a collection of 26 frontend development projects, focusing on building various UI components and mini-applications to practice core web development skills.
 
-<p align="center">
-  <img src="./assets/images/preview.png" alt="Project Preview" width="100%" />
-</p>
-## Tech Stack
+## Projects List
 
-- **Framework:** React
-- **Language:** JavaScript (ES6+)
-- **Styling:** CSS3
-- **Data Fetching:** Fetch API
+| # | Project Name |
+|---|---|
+| 01 | Accodition |
+| 02 | Contact Form |
+| 03 | Contact Form Backend Integration |
+| 04 | Holy Grail Layout |
+| 05 | Progress Bar |
+| 06 | Flight Booker |
+| 07 | Temperature Converter |
+| 08 | Tabs Component |
+| 09 | Data Table |
+| 10 | Dice Roller |
+| 11 | Like Button |
+| 12 | Star Rating |
+| 13 | To-Do List |
+| 14 | Traffic Light |
+| 15 | Digital Watch |
+| 16 | Tic-Tac-Toe |
+| 17 | Job Board |
+| 18 | Weather App |
+| 19 | Theme Mode (Dark/Light) |
+| 20 | Snake and Ladder |
+| 21 | Quiz App |
+| 22 | Password Generator |
+| 23 | Pagination |
+| 24 | OTP Login |
+| 25 | Nested Comments |
+| 26 | Navbar |
+| 27 | Calculator |
 
-## Projects
-
-| # | Project | Description |
-|---|---------|-------------|
-| 1 | Accordion | Expand and collapse sections. |
-| 2 | Contact Form | Submit user details and feedback. |
-| 3 | Holy Grail | Build the classic Holy Grail layout. |
-| 4 | Progress Bars | Animate progress bars on render. |
-| 5 | Flight Booker | Book one-way or return flights. |
-| 6 | Temperature Converter | Convert Celsius and Fahrenheit. |
-| 7 | Tabs | Switch between tab panels. |
-| 8 | Data Table | Display users with pagination. |
-| 9 | Dice Roller | Simulate rolling six-sided dice. |
-| 10 | Like Button | Toggle like/unlike state. |
-| 11 | Star Rating | Select a rating using stars. |
-| 12 | Todo List | Add and delete tasks. |
-| 13 | Traffic Light | Simulate traffic light transitions. |
-| 14 | Digital Clock | Display the current time. |
-| 15 | Tic-Tac-Toe | Two-player Tic-Tac-Toe game. |
-| 16 | Job Board | Fetch and display Hacker News job postings. |
+## About
+This collection serves as a practice ground for frontend technologies, including HTML, CSS, and JavaScript. Each folder contains the source code for a specific challenge.
